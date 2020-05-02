@@ -30,7 +30,7 @@ range0_1 <- function(x){(x-min(x))/(max(x)-min(x))}
 
 
 #### Data ####
-data <- read.csv("Data/GermanyTraining.csv") %>%  #### Your filepath must be defined here.
+data <- read.csv("Data/GermanyTraining.csv", stringsAsFactors = F) %>%
   mutate(Rch_den = range0_1(Rch_den))
 
 # Select variables: Lat/ Long, BL, NUTS2, socioeconomic, build environment and age adjusted case rate
