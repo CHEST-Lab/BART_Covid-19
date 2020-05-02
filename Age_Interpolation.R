@@ -87,7 +87,7 @@ for (this_row in 1:nrow(rki)) {
           names=c("0-4", "5-14", "15-34", "35-59", "60-79", "80+"), 
           xlab = "Age Groups", 
           ylab = "Population", 
-          main = "Interpolated RKI Age Distribution", 
+          main = "Estimated RKI Age Distribution", 
           col="#69b3a2")'
   
   # Include NUTS2 code and results to output
