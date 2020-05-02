@@ -3,15 +3,15 @@ Here we provide a brief overview of our procedure with the key methods used in o
 Note, that we do not provide the processing of the OSM data. 
 
 
-### Age_Interpolation.R
+### Age_Estimation.R
 The age groups from the official census data (INKAR) were different from those of the RKI. Therefore, a probabilistic age estimation has been applied. 
 
 A empirical distribution function has been applied to estimate the probability of the RKI age groups:
+![ECDF](https://github.com/CHEST-Lab/BART_Covid-19/blob/master/ecdf_p.jpeg)
 
-![ECDF](https://github.com/CHEST-Lab/BART_Covid-19/blob/master/ECDF_plot.jpeg)
 
 An exemplary comparison between the original and the estimated distributions is shown here:
-![Age](https://github.com/CHEST-Lab/BART_Covid-19/blob/master/Age_comparison.jpeg)
+![Age](https://github.com/CHEST-Lab/BART_Covid-19/blob/master/AGe_Germany.jpeg)
 
 
 
