@@ -40,12 +40,13 @@ for (this_row in 1:nrow(rki)) {
     unlist()
   
   # Plot original INKAR age distribution
-  'barplot((this_rki[1:10] * this_rki[11]), 
+  'barplot((this_rki[1:10]/100 * this_rki[11]), 
           names = c("0-2", "3-5", "6-17", "18-24", "15-29", "30-49", "50-64", "65-74", "75-84", "84+"), 
-          xlab = "Age Groups", 
+          xlab = "", 
           ylab = "Population", 
           main = "INKAR Age Distribution", 
-          col = "#69b3a2")'
+          col = "#69b3a2",
+          las=2)'
   
   
   #  Create sampels from old age groups:
@@ -85,10 +86,11 @@ for (this_row in 1:nrow(rki)) {
   # Plot population per age-group
   'barplot(age_groups, 
           names=c("0-4", "5-14", "15-34", "35-59", "60-79", "80+"), 
-          xlab = "Age Groups", 
+          xlab = "", 
           ylab = "Population", 
           main = "Estimated RKI Age Distribution", 
-          col="#69b3a2")'
+          col="#69b3a2",
+          las=2)'
   
   # Include NUTS2 code and results to output
   output[this_row,1] <- rki[this_row,12]
