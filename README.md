@@ -10,7 +10,7 @@ A empirical distribution function has been applied to estimate the probability o
 ![ECDF](https://github.com/CHEST-Lab/BART_Covid-19/blob/master/ecdf_p.jpeg)
 
 
-An exemplary comparison between the original and the estimated distributions is shown here:
+The comparison for whole Germany between the original and the estimated distributions is shown here:
 ![Age](https://github.com/CHEST-Lab/BART_Covid-19/blob/master/AGe_Germany.jpeg)
 
 
