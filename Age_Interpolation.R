@@ -9,7 +9,7 @@
 #
 # Note: Here we provide a the method used for the age interpolation. The RKI used different age groups than those
 #       provided by the census data from INKAR. Therefore a probabilistic age interpolation has been conducted.
-#       This is based on the assumption, that the distribution within the specific age groups is linear (see figure in line 64).
+#       This is based on the assumption, that the distribution within the specific age groups is linear (see plot in line 72).
 
 
 library(dplyr)
@@ -38,6 +38,14 @@ for (this_row in 1:nrow(rki)) {
   # Select current Landkreis and convert to vector
   this_rki <- rki[this_row,1:11] %>%
     unlist()
+  
+  # Plot original INKAR age distribution
+  'barplot((this_rki[1:10] * this_rki[11]), 
+          names = c("0-2", "3-5", "6-17", "18-24", "15-29", "30-49", "50-64", "65-74", "75-84", "84+"), 
+          xlab = "Age Groups", 
+          ylab = "Population", 
+          main = "INKAR Age Distribution", 
+          col = "#69b3a2")'
   
   
   #  Create sampels from old age groups:
@@ -75,7 +83,12 @@ for (this_row in 1:nrow(rki)) {
   age_groups <- c(New_A_0_4, New_A_5_14, New_A_15_34, New_A_35_59, New_A_60_79, New_A_80_100) * this_rki[11]
   
   # Plot population per age-group
-  #barplot(age_groups, names=c("0-4", "5-14", "15-34", "35-59", "60-79", "80+"), xlab = "Age Groups", ylab = "Population", col="#69b3a2")
+  'barplot(age_groups, 
+          names=c("0-4", "5-14", "15-34", "35-59", "60-79", "80+"), 
+          xlab = "Age Groups", 
+          ylab = "Population", 
+          main = "Interpolated RKI Age Distribution", 
+          col="#69b3a2")'
   
   # Include NUTS2 code and results to output
   output[this_row,1] <- rki[this_row,12]
