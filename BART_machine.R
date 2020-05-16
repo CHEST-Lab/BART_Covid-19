@@ -13,7 +13,7 @@
 
 
 
-# Set to use 50 GB memory - adjust this to your resources
+# Set to use 45 GB memory - adjust this to your resources
 options(java.parameters = "-Xmx45g")
 
 # Load packages
@@ -23,7 +23,7 @@ library(psych)
 
 
 # Set to run on 20 threads - adjust this to your resources
-set_bart_machine_num_cores(18)
+set_bart_machine_num_cores(20)
 
 # Function for linear stretching. New range: 0-1
 range0_1 <- function(x){(x-min(x))/(max(x)-min(x))}
@@ -156,8 +156,6 @@ bm_cv_final <- bartMachineCV(X=data_subset, y=y,
 # Winning bartMachine: k: 5 nu: 3, q: 0.99 m: 200 
 bm_final <- bartMachine(X = data_subset, y = y, 
                         k=5, nu=3, q=0.99, num_trees=200)
-bm_final <- bartMachine(X = data_subset, y = y, 
-                        k=2, nu=10, q=0.9, num_trees=200)
 summary(bm_final)
 
 
