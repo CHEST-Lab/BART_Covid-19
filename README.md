@@ -1,5 +1,7 @@
 # BART_Covid-19
-Here we provide a brief overview of our procedure with the key methods used in our analysis.
+Scarpone C., Brinkmann S. T., Große T., Sonnenwald D., Fuchs M., Walker BB. (2020): A multimethod approach for county-scale geospatial analysis of emerging infectious diseases: a cross-sectional case study of COVID-19 incidence in Germany. Int J Health Geogr 19, 32. [https://doi.org/10.1186/s12942-020-00225-1](https://ij-healthgeographics.biomedcentral.com/articles/10.1186/s12942-020-00225-1).
+
+Here we provide a brief overview of our procedure with the key methods used in our analysis:
 Note, that we do not provide the processing of the OSM data. 
 
 
